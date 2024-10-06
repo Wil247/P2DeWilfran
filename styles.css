@@ -1,0 +1,100 @@
+/* Estilos generales del body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color de respaldo */
+    background-image: url('main.png'); /* Imagen de fondo SVG */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* Alinear y centrar el contenido del body */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para que el footer quede abajo */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+/* Centrado y tamaño del contenedor */
+.container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para mayor legibilidad */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el contenedor */
+    margin: auto; /* Mantiene el contenido centrado verticalmente */
+    text-align: center;
+}
+
+/* Tamaños de texto adaptados */
+h1 {
+    font-size: 4vw; /* Tamaño adaptativo en función del ancho de la ventana */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 3vw;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 2.5vw;
+}
+
+/* Navegación centrada y con mayor tamaño de texto */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre enlaces */
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00FF00; /* Color del texto del menú */
+    font-weight: bold;
+    font-size: 2.5vw; /* Tamaño adaptativo */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del pie de página */
+.footer {
+    background-color: rgba(76, 175, 80, 0.8); /* Verde claro con opacidad */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2vw; /* Tamaño de fuente adaptativo */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 7vw;
+    }
+
+    h2 {
+        font-size: 5.5vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    nav a {
+        font-size: 5vw;
+    }
+
+    .footer {
+        font-size: 3.5vw;
+    }
+}
