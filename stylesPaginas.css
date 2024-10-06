@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color de fondo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima para ocupar toda la ventana */
+}
+
+header {
+    display: flex; /* Usar flexbox para el encabezado */
+    justify-content: space-between; /* Espacio entre el título y la navegación */
+    align-items: center; /* Alinear verticalmente al centro */
+    background-color: lightblue; /* Color del encabezado */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+h1 {
+    margin: 0; /* Eliminar margen del título */
+    flex: 1; /* Permitir que el h1 ocupe espacio */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+nav {
+    display: flex; /* Usar flexbox para la navegación */
+}
+
+nav a {
+    color: green;
+    text-decoration: none;
+    margin: 0 15px; /* Espacio entre enlaces */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: flex-start; /* Al inicio, para que el footer se mantenga abajo */
+    flex: 1; /* Ocupa el espacio restante */
+    text-align: center; /* Centrar texto */
+    padding: 20px;
+    overflow-y: auto; /* Permitir desplazamiento si el contenido es mayor que la ventana */
+}
+
+.Imagenes, .Videos {
+    margin: 20px 0; /* Espacio entre secciones */
+}
+
+.image-gallery img {
+    max-width: 100%; /* Ajustar el tamaño de la imagen */
+    height: auto; /* Mantener la proporción */
+    margin: 10px; /* Espacio entre imágenes */
+}
+
+.video-gallery video {
+    max-width: 100%; /* Ajustar el tamaño del video */
+    height: auto; /* Mantener la proporción */
+    margin: 10px; /* Espacio entre videos */
+}
+
+.footer {
+    background-color: #333; /* Fondo oscuro */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Empujar el footer hacia abajo */
+}
+
+/* Sticky Footer Styles */
+.footer {
+    position: sticky; /* Hacer el footer sticky */
+    bottom: 0; /* Mantener el footer en la parte inferior */
+    width: 100%; /* Ancho completo */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center; /* Centrar elementos al cambiar de dirección */
+    }
+
+    nav {
+        margin-top: 10px; /* Espacio entre el título y la navegación */
+        justify-content: center; /* Centrar la navegación en móviles */
+    }
+
+    nav a {
+        margin: 5px; /* Espacio más pequeño entre enlaces en móviles */
+    }
+
+    .container {
+        padding: 10px; /* Reducir el relleno en móviles */
+    }
+
+    .Imagenes img, .Videos video {
+        width: 90%; /* Aumentar el tamaño en móviles */
+    }
+}
